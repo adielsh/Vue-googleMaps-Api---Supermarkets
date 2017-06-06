@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>מציאת סופר</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+      <!--<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.4.0/css/bootstrap-rtl.css'>-->
+ 
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+    
+  </head>
+
+  <body>
+      <div id="app" class="container">
+{{myLoc}}
+<!--{{markets}}-->
+
+<h1 class="text-center">מציאת סופרמרקט</h1>
+    <div id="locationField" class="middle">
+      <input id="autocomplete" placeholder="הכנס כתובת"
+             onFocus="geolocate()" type="text" @focusout="updateMyLoc"></input>
+    </div>
+
+    <table id="address" class="middle">
+      <tr>
+        <td class="label">רחוב</td>
+        <td class="slimField"><input class="field" id="street_number"
+              disabled="true"></input></td>
+        <td class="wideField" colspan="2"><input class="field" id="route"
+              disabled="true"></input></td>
+      </tr>
+      <tr>
+        <td class="label">עיר</td>
+        <!-- Note: Selection of address components in this example is typical.
+             You may need to adjust it for the locations relevant to your app. See
+             https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+        -->
+        <td class="wideField" colspan="3"><input class="field" id="locality"
+              disabled="true"></input></td>
+      </tr>
+      <tr>
+        <td class="label">State</td>
+        <td class="slimField"><input class="field"
+              id="administrative_area_level_1" disabled="true"></input></td>
+        <td class="label">Zip code</td>
+        <td class="wideField"><input class="field" id="postal_code"
+              disabled="true"></input></td>
+      </tr>
+      <tr>
+        <td class="label">Country</td>
+        <td class="wideField" colspan="3"><input class="field"
+              id="country" disabled="true"></input></td>
+      </tr>
+    </table>
+<div class="row">
+     <div class="col-md-12">
+     <button class="btn btn-primary" @click="sendMyLoc" class="middle" >שלח</button>
+     </div>
+</div>
+
+<div class="table-responsive">
+  <table v-if="showtable" class="table">
+   <tr>
+       <th>שם</th>
+       <th>מיקום</th>
+       <th>מרחק ממיקומי</th>
+   </tr>
+  <tr v-for="m in marketList">
+<td>{{m.name}}</td>
+<td>{{m.location}}</td>
+<td>{{m.dist}}</td>
+      </tr>
+  </table>
+
+ 
+</div>
+
+
+<!--{{marketList}}-->
+</div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC-7eyNoon-XgqjAl_3FgsQ2j6Ma5ttoE&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+          <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js'></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/index.js"></script>
+
+
+  </body>
+</html>
