@@ -1,4 +1,4 @@
-// let dada = require ('./markets.json');
+
 var app = new Vue({
     el: "#app",
     data: {
@@ -20,7 +20,6 @@ var app = new Vue({
     },
     methods: {
         updateMyLoc(e){
-            // console.log(e)
             this.myLoc = e.target.value
         },
         sendMyLoc(){
