@@ -41,7 +41,7 @@ var app = new Vue({
     },
     created(){
         axios.get('./markets.json').then((res) => {
-            this.markets = res
+            this.markets = res.data
         })
     }
 });
