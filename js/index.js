@@ -40,7 +40,7 @@ var app = new Vue({
     },
     created(){
         axios.get('./markets.json').then((res) => {
-            comsole.log(res)
+            console.log(res)
             this.markets = res.data
         })
     }
