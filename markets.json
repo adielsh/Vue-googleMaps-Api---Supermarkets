@@ -1,9 +1,82 @@
-[{
-name:"rami levy"
-city:"jerusalm"
+[
+  {
+name:"אושר עד",
+location:"הועד הלאומי 21 ירושלים",
+dist:'',
 }
 ,{
-name:"osher ad",
-city:"ashdod"
+name:"מגה",
+location:"הקישון 3 ראשון לציון",
+dist:''
 }
-]
+,{
+name:"רמי לוי",
+location:"הקישון 3 נתניה",
+dist:''
+}
+,{
+name:"שופר סל",
+location:"מצפה רמון",
+dist:''
+},
+  {
+name:"אושר עד",
+location:"הועד הלאומי 21 ירושלים",
+dist:''
+}
+,{
+name:"מגה",
+location:"הקישון 3 ראשון לציון",
+dist:''
+}
+,{
+name:"רמי לוי",
+location:"הקישון 3 נתניה",
+dist:''
+}
+,{
+name:"שופר סל",
+location:"אילת",
+dist:''
+},
+  {
+name:"אושר עד",
+location:"הרצל 21 ראש העין",
+dist:''
+}
+,{
+name:"מגה",
+location:"הקישון 4 חולון",
+dist:''
+}
+,{
+name:"רמי לוי",
+location:"התפוח 3 רמת גן",
+dist:''
+}
+,{
+name:"שופר סל",
+location:"ראש הנקרה",
+dist:''
+},
+  {
+name:"אושר עד",
+location:"הועד הלאומי 21 ירושלים",
+dist:''
+}
+,{
+name:"מגה",
+location:"הקישון 3 ראשון לציון",
+dist:''
+}
+,{
+name:"רמי לוי",
+location:"הקישון 3 נתניה",
+dist:''
+}
+,{
+name:"שופר סל",
+location:"אילת",
+dist:''
+},
+],
